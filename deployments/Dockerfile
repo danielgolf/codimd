@@ -19,6 +19,7 @@ RUN set -xe && \
 FROM $RUNTIME
 USER hackmd
 WORKDIR /home/hackmd/app
+ENV QT_QPA_PLATFORM=offscreen
 COPY --chown=1500:1500 --from=BUILD /home/hackmd/app .
 RUN npm install --production && npm cache clean --force && rm -rf /tmp/{core-js-banners,phantomjs}
 EXPOSE 3000
