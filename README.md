@@ -15,6 +15,7 @@ Built on [HackMD](https://hackmd.io) source code, CodiMD lets you host and contr
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 # Table of Contents
 
+- [Arm64 Build](#Arm64-Build)
 - [HackMD](#hackmd)
 - [CodiMD - The Open Source HackMD](#codimd---the-open-source-hackmd)
 - [Documentation](#documentation)
@@ -27,6 +28,13 @@ Built on [HackMD](https://hackmd.io) source code, CodiMD lets you host and contr
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Arm64 Build
+
+To build the docker container make sure that you first build the [portchecker](https://github.com/danielgolf/codimd-portchecker) and then the [buildpack](https://github.com/danielgolf/codimd-docker-buildpack) from my forks. Then simply run the following command in the project root:
+```
+docker build -t hackmdio/hackmd:2.3.2 -f deployments/Dockerfile --build-arg RUNTIME=hackmdio/runtime:node-10-529545ac .
+```
 
 ## HackMD
 

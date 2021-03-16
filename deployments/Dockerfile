@@ -1,6 +1,6 @@
 ARG RUNTIME
 
-FROM hackmdio/buildpack:node-10-0baafb79 as BUILD
+FROM hackmdio/buildpack:node-10-529545ac as BUILD
 
 COPY --chown=hackmd:hackmd . .
 
